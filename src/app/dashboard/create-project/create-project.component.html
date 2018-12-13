@@ -1,0 +1,54 @@
+<div class="create-project-wrapper">
+  <div class="create-project-name create-project-section">
+    <input placeholder="Project Name" type="text" [(ngModel)]="pname" required>
+  </div>
+  <div class="create-project-description create-project-section">
+    <textarea [(ngModel)]="pdesc" placeholder="Description (200 chars)" required></textarea>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row create-project-section">
+      <div class="create-project-forms col-sm-6 noPaddingLeft">
+        <p class="select-txt">Select Form (s)</p>
+        <select (change)="getForm($event.target)">
+          <option *ngFor="let form of forms" [value]="form.name">{{form.name}}</option>
+        </select>
+    </div>
+  
+      <div class="create-project-reminder col-sm-6 noPaddingLeft">
+        <p class="select-txt">Set reminder</p>
+        <select>
+          
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="create-project-users create-project-section">
+      <p class="select-txt">Select Users (s)</p>
+    <select (change)="getUser($event.target)">
+      <option value="USer 1">USer 1</option>
+      <option value="USer 1">USer 1</option>
+      <option value="USer 1">USer 1</option>
+      <option value="USer 1">USer 1</option>
+      <option value="USer 1">USer 1</option>
+    </select>
+  </div>
+
+  <div class="create-project-symbols create-project-section">
+      <p class="select-txt">Symbol</p>
+    <select (change)="getSymbol($event.target)">
+      <option value="Symbol 1">Symbol 1</option>
+      <option value="Symbol 2">Symbol 2</option>
+      <option value="Symbol 3">Symbol 3</option>
+      <option value="Symbol 4">Symbol 4</option>
+      <option value="Symbol 5">Symbol 5</option>
+    </select>
+  </div>
+
+  <div class="bottom-controls create-project-section">
+    <button class="control-button" (click)="cancelAction()">Cancel</button>
+    <button class="control-button" (click)="createProject()">Create Project</button>
+  </div>
+
+</div>

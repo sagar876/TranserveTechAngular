@@ -1,0 +1,58 @@
+
+<div class="site-header project-header clearfix">
+  <div class="site-col-left isFloatLeft">
+    <h1>PROJECTS<span></span></h1>
+  </div>
+  <div class="site-col-right isFloatRight">
+    <div>
+      <div class="action-item-div">
+        <img src="../assets/refresh.svg" />
+        <span>Refresh</span>    
+      </div>
+      <div class="action-item-div">
+        <img src="../assets/funnel.svg" />
+        <span>Filter</span>
+      </div>
+      <div class="action-item-div">
+        <img src="../assets/search.svg" />
+        <input placeholder="Search project here" [(ngModel)]="query"> 
+      </div>
+      <div class="action-item-div">
+        <button class="primary-button" ><a routerLink="/create-project">Create new project</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="projects-container">
+  <div class="projects-inner">
+    <section class="card-content">
+      <div class="project-box card" *ngFor="let key of data | search:'_id,projectname':query" (click)="getDetails(key._id)">
+        <div class="project-title">
+          <p>{{key.projectname}}</p>
+          <span><img src="../../../assets//menu.svg"></span>
+        </div>
+        <div class="project-details">
+          <div>
+            <span class="font-bold">{{key.formsSubmitted}}</span>
+            <span class="margin-left-15">Number of forms</span>
+          </div>
+          <div>
+            <span class="font-bold">{{key.total}}</span>
+            <div class="margin-left-15">
+
+            </div>
+          </div>
+        </div>
+        <span data-id='{{key._id}}'></span>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
+<div class="project-detail-wrapper" *ngIf="projectIsActive">
+  <app-project-detail [model]="selectedProject"></app-project-detail>
+</div>

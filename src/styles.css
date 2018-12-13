@@ -1,0 +1,267 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.isFloatRight{
+    float: right;
+}
+.isFloatLeft{
+    float: left;
+}
+.noPaddingLeft{
+    padding-left: 0;
+}
+.margin-left-15{
+    margin-left: 15px;
+}
+.primary-button{
+    color: steelblue;
+    border: 1px solid steelblue;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+.primary-button a{
+    color: steelblue;
+}
+.primary-button:hover{
+    background-color: steelblue;
+    color: #fff;
+    border-color: #fff;
+}
+.primary-button:hover a{
+    color: #fff;
+}
+.font-bold{
+    font-weight: bold;
+}
+h1{
+    font-size: 24px;
+}
+
+/*---------------Navigation---------------*/
+.site-navigation-wrapper{
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #243b4f;
+}
+.nav-component{
+    padding: 20px 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-component.active{
+    background-color: #86b9e7;
+}
+.site-logo{
+    text-align: center;
+    background-color: #27364b;
+}
+
+.site-logo.nav-component img{
+    max-width: 120px;
+}
+.nav-component img{
+    max-width: 20px;
+}
+.nav-component p{
+    font-size: 14px;
+    padding-top: 5px;
+    line-height: normal;
+}
+/*------------HEADER--------------------*/
+.site-header{
+    padding: 25px;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,.35);
+}
+.site-header .action-item-div{
+    display: inline-block;
+    margin-right: 35px;
+}
+.action-item-div {
+    color: #ddd;
+}
+.action-item-div img{
+    width: 20px;
+    margin-right: 5px;
+}
+.action-item-div input{
+    border:0;
+    border-bottom: 1px solid #eee;  
+    padding-left: 15px;
+}   
+/*---------------SITE CONTENT ------------------------*/
+
+.site-content{
+    margin-left: 160px;
+}
+.project-box{
+    width: 250px;
+    display: inline-block;
+    margin-right: 35px;
+    cursor: pointer;
+}
+.project-box:hover{
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,.35);
+}
+p{
+    margin:0;
+}
+.projects-container{
+    border-bottom: 3px solid #eee;
+    padding-bottom: 15px;
+    padding: 35px;
+}
+.project-title{
+    padding: 5px;
+    background-color: steelblue;
+    color: #fff;
+    position: relative;
+}
+.project-title span{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.project-title span img{
+    width: 15px;
+}
+.project-details{
+    padding: 15px; 
+    background-color: #eee;
+}
+.project-details>div{
+    margin-bottom: 8px;
+}
+.card{
+    display: inline-block;
+}
+.card-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 15px;
+  }
+ .highlighted-project-detail-wrapper a.view-more{
+    color: steelblue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .project-detail-wrapper{
+      padding: 0 35px;
+  }
+  .highlighted-project-detail-wrapper p {
+      padding: 7px 0;
+  }
+  .highlighted-project-detail-wrapper{
+      margin-top: 25px;
+      border-bottom: 3px solid #eee;
+      padding-bottom: 15px;
+      position: relative;
+  }
+  .highlighted-project-detail-wrapper button{
+    position: absolute;
+    top: 5px;
+    right: 40px;
+  }
+  
+
+
+/*---------------Dashboard tabs ------------------------*/
+.tab-content table{
+    width: 75%;
+}
+.table-cover{
+    height: 200px;
+    max-height:250px;
+    overflow: auto;
+}
+.tab-control-bar img{
+    width: 20px;
+    margin-right: 15px;
+}
+.tab-control-bar input {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding-left: 15px;
+}
+.tab-control-bar{
+    padding: 15px 10px;
+}
+.nav-tabs li a {
+    padding: 15px;
+    display:block;
+    color: steelblue;
+}
+.nav-tabs li.active a{
+    border-bottom: 2px solid steelblue;
+    font-weight: bold;
+}
+.dashboard-tab-wrapper thead{
+    background-color: #c7e0f6;
+}
+.dashboard-tab-wrapper td,.dashboard-tab-wrapper th{
+    padding: 5px 15px;
+}
+.dashboard-tab-wrapper tr{
+    border-bottom: 2px solid #ddd;
+}
+.dashboard-tab-wrapper{
+    padding: 35px;
+}
+
+
+
+
+.create-project-wrapper{
+    margin-left: 160px;
+    padding: 35px;
+}
+.create-project-section{
+    padding: 15px;
+}
+.create-project-section input{
+    border: 0;
+    border-bottom: 1px solid #eee;
+
+}
+.create-project-section textarea{
+    border: 0;
+    border-bottom: 1px solid #eee;
+    height: 75px;
+    width: 100%;
+}
+.bottom-controls{
+    margin-top: 20px;
+}
+.bottom-controls button:last-child{
+    margin-left: 30px;
+    background-color: #222;
+    color: #fff;
+    border: 0;
+}
+.bottom-controls button:first-child{
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #222;
+}
+.bottom-controls button{
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}
+.create-project-section select {
+    width: 100%;
+    border: 0;
+    height: 35px;
+    border: 1px solid #eee;
+}
+.select-txt{
+    margin-bottom: 5px;
+}

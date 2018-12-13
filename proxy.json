@@ -1,0 +1,8 @@
+{
+    "/getprojects/*": {
+        "target": "http://localhost:1234/products",
+        "secure": "false",
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+    }

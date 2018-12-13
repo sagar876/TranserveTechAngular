@@ -1,0 +1,76 @@
+<div class="dashboard-tabs-box">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#forms">Forms</a></li>
+    <li><a data-toggle="tab" href="#users">Users</a></li>
+  </ul>
+
+  <div class="tab-control-bar clearfix">
+    <div class="isFloatLeft">
+      <button class="primary-button">add new form to project </button>
+    </div>
+    <div class="isFloatRight">
+      <img src="../assets/search.svg" />
+      <input placeholder="Search form here" [(ngModel)]="query">
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div id="forms" class="table-cover">
+      <table>
+        <thead>
+          <tr>
+            <th>
+
+            </th>
+            <th>
+              Forms
+            </th>
+            <th>
+              Shape
+            </th>
+            <th>
+              Reminder
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let key of forms | search:'name,shape,updateddate':query"> 
+            <td></td>
+            <td>{{key.name}}</td>
+            <td>{{key.shape}}</td>
+            <td>{{key.updateddate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="users" class="tab-pane fade table-cover">
+      <table>
+        <thead>
+          <tr>
+            <th>
+
+            </th>
+            <th>
+              Users
+            </th>
+            <th>
+              Shape
+            </th>
+            <th>
+              Reminder
+            </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>Form schrool</td>
+            <td>Point</td>
+            <td>Reminder</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
